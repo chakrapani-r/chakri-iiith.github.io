@@ -115,23 +115,135 @@
 				</section>
 
 				<section>
+				  <section>
 					<h2>More core modules</h2>
+					<ul class="fragment"><li>4 core modules ~ 20+ D7 modules</li></ul>
+					<aside class="notes">
+					<ul>
+					  <li><i>'Language'</i> module serves as a base layer for language support
+					    	<aside class="notes">
+						  <ul>
+						    <li>Provides language configuration</li>
+						    <li>assignment</li>
+						    <li>detection</li>
+						  </ul>
+						</aside>
+					  </li>
+					  <li>Interface translation
+					    <aside class="notes">
+					      <ul>
+						<li><medium>To have inetrface in different languages</medium></li>
+					      </ul>
+					    </aside>
+					  </li>
+					  <li>Configuration translation
+					    <aside class="notes">
+					      <ul>
+						<li>provide a user interface to the existing backend support for configuration translation</li>
+					      </ul>
+					    </aside>
+					  </li>
+					  <li>Content translation
+					    <aside class="notes">
+					      <ul>
+						<li>Supports content entities and translates fields</li>
+					      </ul>
+					    </aside>
+					  </li>
+					</ul>
+</aside>
+					<img class="fragment" src="./assets/core_modules.jpeg">
+					</section>
+					<section>
+					  <img  src="./assets/Drupal8MultilingualSystem.png">
+					</section>
 				</section>
 
 				<section>
+				  <section>
 					<h2>Simple language setup and optional english</h2>
+					<ul>
+					  <li>Simple language overview screen</li>
+					  <li>Add/Remove languages including english</li>
+					  <li>No more disabled languages</li>
+					</ul>
+				  </section>
+				  <section>
+					  <img src="./assets/language.png">
+				  </section>
+				  <section>
+					  <img src="./assets/edit_language.png">
+				  </section>
 				</section>
 
 				<section>
+				  <section>
 					<h2>Higly flexible detection options</h2>
+
+					  <img src="./assets/detection_selection.png">
+				  </section>
+				  <section>
+					<h2>Language detection options for content</h2>
+
+					  <img src="./assets/detection_selection_content.jpeg">
+				  </section>
+
+				  <section>
+				    <img src="./assets/url_configure.jpeg">
+				  </section>
+				  <section>
+				    <img src="./assets/browser_configure.png">
+				  </section>
+				  <section>
+				    <img src="./assets/session_configure.png">
+				  </section>
+
 				</section>
 
 				<section>
+				  <section>
 					<h2>Limitless language assignment</h2>
+					<h3>Extensible special languages</h3>
+					<ul>
+					<li>Not everything can have a language</li>
+					<li>Language neutral in D7 was a special language</li>
+					<li>In D8, we have two special languages 'Not Applicable' and 'Not specified</li>
+					<li>Modules can add languages like these</li>
+					</ul>
+				  </section>
+				  <section>
+				      <h3>you can create views in any language</h3>
+				    <img src="./assets/views_language.png">
+				  </section>
+				  <section>
+				    <h3>Content entities with bundles are more flexible</h3>
+				    <ul>
+				      <li>In D7, we have content type settings for language feature</li>
+				      <li>D8 explands it to all entity types and bundles</li>
+				      <li>D8 entities include Comments, users, taxonomy terms, nodes, menus and custom blocks</li>
+				      <li>Central configuration screen for all these entity types</li>
+				    </ul>				 
+				  </section>
+				  <section>
+				    <img src="./assets/content_language.png">
+				    <a href="http://128.199.182.211:8080/en/admin/config/regional/content-language">Click for Demo</a>
+				  </section>
 				</section>
 
 				<section>
-					<h2>Easier rtl styling</h2>
+				  <section>
+				    <h2>Easier rtl styling</h2>
+				      <ul>
+					  <li>Language setings include rtl or ltr orientation per language</li>
+					  <li>Clean support for rtl from picking the install profile</li>
+					  <li>In D7, for any css file, the rtl counterpart was file-rtl.css</li>
+					  <li>Now rtl is all integrated in actual css</li>
+					  <li>you should use attribute selectors like <code>[dir="rtl"]</code> </li>
+				      </ul>
+				  </section>
+				  <section>
+				    <img src="./assets/rtl.jpeg">
+				  </section>
 				</section>
 				<section>
 					<h2>Language visibility and filtering</h2>
@@ -189,16 +301,16 @@ function linkify( selector ) {
 				<section>
 					<h2>References</h2>
 					<ul>
-						<li><a href="http://hojtsy.hu/multilingual-drupal8">Multilingual Drupal by Gabor Hojty</a></li>
-						<li><a href="http://www.drupal8multilingual.org/">http://drupal8multilingual.org</a></li>
-						<li><a href="http://www.drupal8multilingual.org/workshop">Multilingual workshop from Drupalcon Amsterdam</a></li>
-<li><a href="https://amsterdam2014.drupal.org/session/multilingual-content-d8-highly-evolved-permutated-api">Multilingual content in D8 from Drupalcon Amsterdam</a></li>
+  					  <li><a href="http://hojtsy.hu/multilingual-drupal8">Multilingual Drupal by Gabor Hojtsy</a></li>
+					  <li><a href="http://www.drupal8multilingual.org/">http://drupal8multilingual.org</a></li>
+					  <li><a href="http://www.drupal8multilingual.org/workshop">Multilingual workshop from Drupalcon Amsterdam</a></li>
+					  <li><a href="https://amsterdam2014.drupal.org/session/multilingual-content-d8-highly-evolved-permutated-api">Multilingual content in D8 from Drupalcon Amsterdam</a></li>
 					</ul>
 				</section>
 
 				<section>
 					<h1>Thank You!</h1>
-					<h3>Chakrapani Reddivari / @chakri_iiith</h3>
+					<h3>Chakrapani R / @chakri_iiith</h3>
 				</section>
 
 			</div>
