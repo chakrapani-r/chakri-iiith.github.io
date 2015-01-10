@@ -246,20 +246,122 @@
 				  </section>
 				</section>
 				<section>
+				  <section>
 					<h2>Language visibility and filtering</h2>
+					<strong>Block visibility</strong>
+					<ul>
+					<li>Extended visibility setting for language</li>
+					<li>eg: seperate menus for differenct languages displayed through blocks</li>
+					<li>Drupal allows you to configure a separate language negotiation method for content</li>
+					</ul>
+				  </section>
+				  <section>
+					<img src="./assets/configure_block.png">
+				  </section>
+				  <section>
+					<h2>Language visibility and filtering</h2>
+					<strong>Views language filtering</strong>
+					<img src="./assets/views_filter.jpeg">
+				  </section>
+
 				</section>
 
 				<section>
+				  <section>
 					<h2>Transliteration in core</h2>
+					<ul>
+					  <li>Drupal now comes with powerfull transliteration system</li>
+					  <li>Used for machine name generation</li>
+					</ul>
+				  </section>
+				  <section>
+				    <h2>Transliteration in core</h2>
+					<img src="./assets/transliteration.png">
+				  </section>
 				</section>
 				<section>
-                     		        <h2>Deployment friendly automated downloads</h2>
+				  <section>
+                     		    <h2>Deployment friendly automated downloads</h2>
+				    <ul>
+				      <li>Automated translation downloads</li>
+				      <li>Automated updates from the community</li>
+				      <li>Update frequency, source and overrides are configurable</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Staging and deployment friendly</h2>
+				    <ul>
+				      <li>All the retrieved files are stored in once central directory</li>
+				      <li>Dev environment can enable translation updates</li>
+				      <li>Live environment to have it disabled</li>
+				      <li>Import in live can be done from a preconfigured directory</li>
+				      <li>This dir can be put under version control</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <img src="./assets/configure_updates.jpeg">
+				  </section>
 				</section>
 				<section>
-                     		        <h2>Context aware translation APIs</h2>
+				  <section>
+                     		    <h2>Context specific translation APIs</h2>
+				  </section>
+				  <section>
+				    <h3>No more get_t() and st()</h3>
+				    <ul>
+				      <li>In D7, t() can be used only after db was setup</li>
+				      <li>st() should be used during installation</li>
+				      <li>Otherwise, use get_t() to get the right callback</li>
+				      <li>In drupal8, this is handled within t()</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <Strong>Context in Drupal.t() and Drupal.formatPlural()</strong>
+				    <h3></h3>
+				    <ul>
+				      <li>In D7, t() and format_plural could take context</li>
+				      <li>Which helps the translators to translate ambiguous text</li>
+				      <li>This is now extented to their JS counterparts</li>
+				      <br/>
+				      <pre><code data-trim contenteditable>
+					  Drupal.t('May', {}, {context: "Long month name"});
+				      </code></pre>
+				    </ul>
+				  </section>
+				  <section>
+				    <Strong>Translation in Twig templates</strong>
+				    <h3></h3>
+				    <ul>
+				      <li>This is not a phptemplate so we can't use t() directly</li>
+				      <li>This is possible with 't' or 'trans'</li>
+				      <li>{% trans %} block is also supported</li>
+				      <br/>
+				      <pre><code data-trim contenteditable>
+{{ 'Hello Delhi.'|trans }}
+{{ 'Hello Delhi.'|t }}
+				      </code></pre>
+				      <pre><code data-trim contenteditable>
+{% set count = 1 %}
+{% trans %}
+  One Commit.
+{% plural count %}
+  {{ count }} Commits.
+{% endtrans %}
+				      </code></pre>
+
+				    </ul>
+				  </section>
+
 				</section>
 				<section>
+				  <section>
                      		        <h2>String customizations tracked</h2>
+					<img src="./assets/export_translations.png">
+				  </section>
+				  <section>
+                     		        <h2>String customizations tracked</h2>
+					<img src="./assets/import_translations.png">
+				  </section>
 				</section>
 				<section>
                      		        <h2>Translatable English</h2>
