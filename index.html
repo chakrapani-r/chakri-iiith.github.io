@@ -156,6 +156,7 @@
 					</section>
 					<section>
 					  <img  src="./assets/Drupal8MultilingualSystem.png">
+					  <small>Image source: <a href="http://hojtsy.hu/multilingual-drupal8">http://hojtsy.hu/multilingual-drupal8</a></small>
 					</section>
 				</section>
 
@@ -163,9 +164,9 @@
 				  <section>
 					<h2>Simple language setup and optional english</h2>
 					<ul>
-					  <li>Simple language overview screen</li>
-					  <li>Add/Remove languages including english</li>
-					  <li>No more disabled languages</li>
+					  <li class="fragment">Simple language overview screen</li>
+					  <li class="fragment">Add/Remove languages including english</li>
+					  <li class="fragment">No more disabled languages</li>
 					</ul>
 				  </section>
 				  <section>
@@ -203,12 +204,12 @@
 				<section>
 				  <section>
 					<h2>Limitless language assignment</h2>
-					<h3>Extensible special languages</h3>
+					<h3 class="fragment">Extensible special languages</h3>
 					<ul>
-					<li>Not everything can have a language</li>
-					<li>Language neutral in D7 was a special language</li>
-					<li>In D8, we have two special languages 'Not Applicable' and 'Not specified</li>
-					<li>Modules can add languages like these</li>
+					<li class="fragment">Not everything can have a language</li>
+					<li class="fragment">Language neutral in D7 was a special language</li>
+					<li class="fragment">In D8, we have two special languages 'Not Applicable' and 'Not specified</li>
+					<li class="fragment">Modules can add languages like these</li>
 					</ul>
 				  </section>
 				  <section>
@@ -218,15 +219,18 @@
 				  <section>
 				    <h3>Content entities with bundles are more flexible</h3>
 				    <ul>
-				      <li>In D7, we have content type settings for language feature</li>
-				      <li>D8 explands it to all entity types and bundles</li>
-				      <li>D8 entities include Comments, users, taxonomy terms, nodes, menus and custom blocks</li>
-				      <li>Central configuration screen for all these entity types</li>
+				      <li class="fragment">In D7, we have content type settings for language feature</li>
+				      <li class="fragment">D8 explands it to all entity types and bundles</li>
+				      <li class="fragment">D8 entities include Comments, users, taxonomy terms, nodes, menus and custom blocks</li>
+				      <li class="fragment">Central configuration screen for all these entity types</li>
 				    </ul>				 
 				  </section>
 				  <section>
 				    <img src="./assets/content_language.png">
 				    <a href="http://128.199.182.211:8080/en/admin/config/regional/content-language">Click for Demo</a>
+				  </section>
+				  <section>
+				    <img src="./assets/content_settings_demo.jpeg">
 				  </section>
 				</section>
 
@@ -234,11 +238,11 @@
 				  <section>
 				    <h2>Easier rtl styling</h2>
 				      <ul>
-					  <li>Language setings include rtl or ltr orientation per language</li>
-					  <li>Clean support for rtl from picking the install profile</li>
-					  <li>In D7, for any css file, the rtl counterpart was file-rtl.css</li>
-					  <li>Now rtl is all integrated in actual css</li>
-					  <li>you should use attribute selectors like <code>[dir="rtl"]</code> </li>
+					  <li class="fragment">Language setings include rtl or ltr orientation per language</li>
+					  <li class="fragment">Clean support for rtl from picking the install profile</li>
+					  <li class="fragment">In D7, for any css file, the rtl counterpart was file-rtl.css</li>
+					  <li class="fragment">Now rtl is all integrated in actual css</li>
+					  <li class="fragment">you should use attribute selectors like <code>[dir="rtl"]</code> </li>
 				      </ul>
 				  </section>
 				  <section>
@@ -248,11 +252,11 @@
 				<section>
 				  <section>
 					<h2>Language visibility and filtering</h2>
-					<strong>Block visibility</strong>
+					<strong class="fragment">Block visibility</strong>
 					<ul>
-					<li>Extended visibility setting for language</li>
-					<li>eg: seperate menus for differenct languages displayed through blocks</li>
-					<li>Drupal allows you to configure a separate language negotiation method for content</li>
+					<li class="fragment">Extended visibility setting for language</li>
+					<li class="fragment">eg: seperate menus for differenct languages displayed through blocks</li>
+					<li class="fragment">Drupal allows you to configure a separate language negotiation method for content</li>
 					</ul>
 				  </section>
 				  <section>
@@ -260,8 +264,8 @@
 				  </section>
 				  <section>
 					<h2>Language visibility and filtering</h2>
-					<strong>Views language filtering</strong>
-					<img src="./assets/views_filter.jpeg">
+					<strong class="fragment">Views language filtering</strong>
+					<img class="fragment" src="./assets/views_filter.jpeg">
 				  </section>
 
 				</section>
@@ -283,19 +287,19 @@
 				  <section>
                      		    <h2>Deployment friendly automated downloads</h2>
 				    <ul>
-				      <li>Automated translation downloads</li>
-				      <li>Automated updates from the community</li>
-				      <li>Update frequency, source and overrides are configurable</li>
+				      <li class="fragment">Automated translation downloads</li>
+				      <li class="fragment">Automated updates from the community</li>
+				      <li class="fragment">Update frequency, source and overrides are configurable</li>
 				    </ul>
 				  </section>
 				  <section>
 				    <h2>Staging and deployment friendly</h2>
 				    <ul>
-				      <li>All the retrieved files are stored in once central directory</li>
-				      <li>Dev environment can enable translation updates</li>
-				      <li>Live environment to have it disabled</li>
-				      <li>Import in live can be done from a preconfigured directory</li>
-				      <li>This dir can be put under version control</li>
+				      <li class="fragment">All the retrieved files are stored in once central directory</li>
+				      <li class="fragment">Dev environment can enable translation updates</li>
+				      <li class="fragment">Live environment to have it disabled</li>
+				      <li class="fragment">Import in live can be done from a preconfigured directory</li>
+				      <li class="fragment">This dir can be put under version control</li>
 				    </ul>
 				  </section>
 				  <section>
@@ -309,21 +313,21 @@
 				  <section>
 				    <h3>No more get_t() and st()</h3>
 				    <ul>
-				      <li>In D7, t() can be used only after db was setup</li>
-				      <li>st() should be used during installation</li>
-				      <li>Otherwise, use get_t() to get the right callback</li>
-				      <li>In drupal8, this is handled within t()</li>
+				      <li class="fragment">In D7, t() can be used only after db was setup</li>
+				      <li class="fragment">st() should be used during installation</li>
+				      <li class="fragment">Otherwise, use get_t() to get the right callback</li>
+				      <li class="fragment">In drupal8, this is handled within t()</li>
 				    </ul>
 				  </section>
 				  <section>
 				    <Strong>Context in Drupal.t() and Drupal.formatPlural()</strong>
 				    <h3></h3>
 				    <ul>
-				      <li>In D7, t() and format_plural could take context</li>
-				      <li>Which helps the translators to translate ambiguous text</li>
-				      <li>This is now extented to their JS counterparts</li>
+				      <li class="fragment">In D7, t() and format_plural could take context</li>
+				      <li class="fragment">Which helps the translators to translate ambiguous text</li>
+				      <li class="fragment">This is now extented to their JS counterparts</li>
 				      <br/>
-				      <pre><code data-trim contenteditable>
+				      <pre class="fragment"><code data-trim contenteditable>
 					  Drupal.t('May', {}, {context: "Long month name"});
 				      </code></pre>
 				    </ul>
@@ -332,15 +336,15 @@
 				    <Strong>Translation in Twig templates</strong>
 				    <h3></h3>
 				    <ul>
-				      <li>This is not a phptemplate so we can't use t() directly</li>
-				      <li>This is possible with 't' or 'trans'</li>
-				      <li>{% trans %} block is also supported</li>
+				      <li class="fragment">This is not a phptemplate so we can't use t() directly</li>
+				      <li class="fragment">This is possible with 't' or 'trans'</li>
+				      <li class="fragment">{% trans %} block is also supported</li>
 				      <br/>
-				      <pre><code data-trim contenteditable>
+				      <pre class="fragment"><code data-trim contenteditable>
 {{ 'Hello Delhi.'|trans }}
 {{ 'Hello Delhi.'|t }}
 				      </code></pre>
-				      <pre><code data-trim contenteditable>
+				      <pre class="fragment"><code data-trim contenteditable>
 {% set count = 1 %}
 {% trans %}
   One Commit.
@@ -384,13 +388,73 @@
 				  </section>
 				</section>
 				<section>
+				  <section>
                      		        <h2>Content and configuration translations</h2>
+					<ul>
+					  <li class="fragment">D7 provides translation capabilities for nodes but no other content or configuration</li>
+					  <li class="fragment">Want to translate Blocks, Terms or menus ? No</li>
+					  <li class="fragment">Complicated solutions by contributed modules</li>
+					  <li class="fragment"><i>i18n_menu, i18n_block, i18n_variable, i18nviews, webform_localization</i></li>
+					</ul>
+				  </section>
+				  <section>
+                     		        <h2>Worry no more!</h2>
+					  <h3 class="fragment">Drupal 8 has general base solution in core</h3>
+					<ul>
+					  <li class="fragment">Mostly we work with either Configuration or a Content (entities)</li>
+					  <li class="fragment">Content entities almost all have fields</li>
+					  <li class="fragment">Fields come with native support for multilingual storage, editing and rendering</li>
+					  <li class="fragment">Every piece of content is now translatable</li>
+					  <li class="fragment">No need for specialized systems and glue modules!</li>
+					</ul>
+				  </section>
+				  <section>
+				    <h2>Configuration Translations</h2>
+				    <ul>
+				      <li class="fragment">Config system has full support for language overrides</li>
+				      <li class="fragment">All values stored in configuration may have a language variance</li>
+				      <li class="fragment">Contexual access system lets you load values with specific language overrides</li>
+				      <li class="fragment">These overrides are fully deployment friendly</li>
+				      <li class="fragment">Default(shipped) configuration is translatable</li>
+				      <li class="fragment">Eg: shipped Views, content types, fields, etc</li>
+				      <li class="fragment"><i>Config translation</i> provides the UI</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <img src="./assets/config_ui.jpeg">
+				  </section>
+				  <section>
+				    <h2>Config VS Content</h2>
+				    <img src="./assets/ConfigContent.jpg">
+				    <small>Image source: <a href="http://hojtsy.hu/multilingual-drupal8">http://hojtsy.hu/multilingual-drupal8</a></small>
+				  </section>
 				</section>
 				<section>
-                     		        <h2>Content translations</h2>
-				</section>
-				<section>
-                     		        <h2>Configuration translations</h2>
+				  <section>
+				    <h2>Configuration translations - How</h2>
+				    <ul>
+				      <li class="fragment">how do we know the language of your config</li>
+				      <li class="fragment">Drupal 8 configuration system uses YAML files to store settings</li>
+				      <pre class="fragment"><i>system.site.yml</i><code data-trim contenteditable>
+uuid: ''
+name: Drupal
+mail: ''
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: user
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+				      </code></pre>
+				      <li class="fragment">Copied and modified. Source is not modified</li>
+				    </ul>
+				  </section>
+				  <section>
+				    No Copies of files for each language
+				    <img src="./assets/config_how.png">
+				  </section>
 				</section>
 				<section>
 					<h2>References</h2>
@@ -410,8 +474,11 @@
 			</div>
 
 		</div>
-    <footer class="azri-logo">
+    <footer class="azri-logo logo">
       <a href="http://www.arisolutions.com/"><img src="assets/azri-logo-white.png" alt="azri logo" /></a>
+    </footer>
+    <footer class="dcd-logo logo">
+      <a href="http://2015.drupalcampdelhi.com/"><img src="assets/dcd_logo.png" alt="dcd logo" /></a>
     </footer>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
@@ -421,7 +488,7 @@
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
+				controls: false,
 				progress: true,
 				history: true,
 				center: true,
