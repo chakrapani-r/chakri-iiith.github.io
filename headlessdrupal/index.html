@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Headless Drupal</title>
+		<title>Decoupled Drupal & Mobile Applications</title>
 
-		<meta name="description" content="Headless Drupal Workshop ">
-		<meta name="author" content="Chakrapani R, Gokul NK">
+		<meta name="description" content="Decoupled Drupal & Mobile Applications">
+		<meta name="author" content="Chakrapani R">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -44,43 +44,23 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Headless Drupal</h1>
-					<h3>Drupal as a Backend</h3>
+					<h2>Decoupled Drupal & Mobile Applications</h2>
 					<p>
- 					        <small>Presented by &nbsp;<a href="http://chakrapani.me"> Chakrapani R </a> & <a href="http://bit.ly/gokulnk"> Gokul NK </a></a></small>
+ 					        <small>Presented by &nbsp;<a href="http://chakrapani.me"> Chakrapani R </a></small>
 					</p>
 	<p>
  					        <medium><a href="http://azrisolutions.com"> AzriSolutions </a></medium>
 					</p>
 				</section>
 				<section>
-					<h2>Gokul N K</h2>
-					<ul>
-						<li>Graduated from Rashtreeya Vidyalaya (RVCE)</li>
-						<li>From Bangalore</li>
-						<li>Drupal Architect at Azri Solutions</li>
-						<li>Formerly a Java Developer @ Mindtree</li>
-						<li>Drupal since 2011</li>
-						<li>Lead Maintainer for Automatr Module</li>
-						<li>Cofounder of Aziteez</li>
-						<li>Bowling Addict</li>
-					</ul>
-					<aside class="notes">
-						 speaker notes window (hit 's' on your keyboard).
-					</aside>
-
-				</section>
-				<section>
 					<h2>Chakrapani R</h2>
 					<ul>
-						<li>Graduated from IIIT-Hyderabad</li>
-						<li>From Bangalore</li>
+						<li>From Bangalore, India</li>
 						<li>Drupal architect at Azri Solutions</li>
 						<li>Drupal since 2009</li>
-						<li>Author of Zoho D7 module</li>
-						<li>Core contributor</li>
-						<li>Led a team which contribed 50+ commits to core</li>
-						<li>Drupal Bangalore</li>
+						<li>Drupal contributor</li>
+						<li>Lead organizer of Drupal Bangalore</li>
+						<li>Speaker at various Drupal Camps in India</li>
 					</ul>
 					<aside class="notes">
 						 speaker notes window (hit 's' on your keyboard).
@@ -101,11 +81,77 @@
 					</ul>
 				</section>
 
+				<section>
+					<h2>What is Headless Drupal ?</h2>
+					<ul>
+					  <li class="fragment">Have you output xml or json from Drupsl?</li>
+					  <li class="fragment">Yes ? You have already used Headless!</li>
+					  <li class="fragment">It's a fancy term for Drupal as backend</li>
+					  <li class="fragment">With your choice of front end</li>
+					</ul>
+				</section>
 
+				<section>
+					<h2>Custom Frontend ?</h2>
+					<ul>
+					  <li class="fragment">Web App</li>
+					  <li class="fragment">Mobile App</li>
+					  <li class="fragment">Desktop App</li>
+					  <li class="fragment">Any system that feeds on API provided by Drupal</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Decoupling</h2>
+					<ul>
+					  <li class="fragment">Decouples backend from front end</li>
+					  <li class="fragment">Used by many other stacks</li>
+					  <li class="fragment">It's been there from Drupal 6!</li>
+					</ul>
+				</section>
+				<section>
+					<h2>'Serving Pages' to 'Talking HTTP'</h2>
+				  <ul>
+				    <li class="fragment">Making the shift from "serving pages" to "talking HTTP"</li>
+				    <li class="fragment">Drupal by default assumes that it only serves web pages</li>
+				    <li class="fragment">This has to change for Drupal to be truly headless</li>
+				  </ul>
+				</section>
+                                <section>
+					<h2>Available options in Drupal</h2>
+				  <ul>
+				    <li class="fragment">Services</li>
+				    <li class="fragment">RestWS</li>
+				    <li class="fragment">Mean.IO</li>
+				    <li class="fragment">Restful</li>				    
+				  </ul>
+				</section>
+                                <section>
+					<h2>Services</h2>
+				  <ul>
+				    <li class="fragment">By far the easiest to setup and use</li>
+				    <li class="fragment">Widely used</li>
+				    <li class="fragment">Views integration (views_services)</li>
+				  </ul>
+				</section>
+
+                                <section>
+					<h2>RestWS</h2>
+				  <ul>
+				    <li class="fragment">Leverages entity API</li>
+				    <li class="fragment">Supports CRUD operations</li>
+				    <li class="fragment">Will be part of Drupal 8</li>
+				    <img class="fragment" src="./assets/restws_core.jpeg">
+				  </ul>
+				</section>
+<section>
+<h2>Resources</h2>
+<li><a href="https://drupalize.me/blog/201401/introduction-restful-web-services-drupal-8">https://drupalize.me/blog/201401/introduction-restful-web-services-drupal-8</a></li>
+</section>
 
 				<section>
 					<h1>Thank You!</h1>
-					<h3>Chakrapani R / Gokul NK</h3>
+					<h3>Chakrapani R</h3>
 				</section>
 
 			</div>
@@ -114,8 +160,8 @@
     <footer class="azri-logo logo">
       <a href="http://www.arisolutions.com/"><img src="assets/azri-logo-white.png" alt="azri logo" /></a>
     </footer>
-    <footer class="dcd-logo logo">
-      <a href="http://2015.drupalcampdelhi.com/"><img src="assets/dcd_logo.png" alt="dcd logo" /></a>
+    <footer class="nyccamp-logo logo">
+      <a href="http://nyccamp.org/"><img src="assets/nyccamp_logo.png" alt="NYC Camp logo" /></a>
     </footer>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>

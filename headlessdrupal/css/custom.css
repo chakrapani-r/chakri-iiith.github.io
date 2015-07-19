@@ -8,13 +8,13 @@ footer.azri-logo {
 footer.azri-logo img {
   width: 100px;
 }
-footer.dcd-logo {
+footer.nyccamp-logo {
   position: absolute;
   bottom: 2em;
   right: 3em;
 }
-footer.dcd-logo img {
-  height:60px;
+footer.nyccamp-logo img {
+  height:80px;
 //  width: 100px;
 }
 .reveal .controls {
