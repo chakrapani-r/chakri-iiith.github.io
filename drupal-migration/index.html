@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Migration to Drupal8</title>
+		<title>Migration to Drupal 8</title>
 
 		<meta name="description" content="Migration to Drupal8 ">
 		<meta name="author" content="Chakrapani R">
@@ -45,10 +45,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Migration to Drupal8</h1>
+					<h1>Migration to Drupal 8</h1>
 					<h3></h3>
 					<p>
- 					        <small><a href="http://chakrapani.me"> Asif Noor </a> / <a href="http://twitter.com/chakri_iiith">@Rock</a></small>
+ 					        <small><a href="http://chakrapani.me"> Mohammad Asif </a> / <a href="http://twitter.com/chakri_iiith">@Rock</a></small>
 					</p>
 
 					<p>
@@ -74,7 +74,7 @@
 				<section>
 					<h2>Overview</h2>
 					<ul>
-					  <li class="fragment">Why Migration to Drupal8</li>
+					  <li class="fragment">Why Migration to Drupal 8</li>
 					  <li class="fragment">Update, Upgrade vs Migration</li>
 					  <li class="fragment">Core Migration modules</li>
 					  <li class="fragment">Contributed Modules</li>
@@ -84,7 +84,7 @@
 					  <li class="fragment">Executing migration with Drush</li>
 					  <li class="fragment">Creating Custom migration plugins</li>
 					  <li class="fragment">Known Issues</li>
-					  <li class="fragment">Migration Tests in Drupal8</li>
+					  <li class="fragment">Migration Tests in Drupal 8</li>
 					</ul>
 				</section>
 				<section>
@@ -92,7 +92,7 @@
 				  <ul>
 				    <li class="fragment">Contrib module developer</li>
 				    <li class="fragment">Custom module developer</li>
-				    <li class="fragment">Worked with migration(d7)</li>
+				    <li class="fragment">Worked with migration (d7)</li>
 				    <li class="fragment">Already familier with D8</li>
 				    <li class="fragment">Others!</li>
 				  </ul>
@@ -102,9 +102,9 @@
 				<!-- Example of nested vertical slides -->
 				<section>
 				        <section>
-					  <h2>Why migration to Drupal8 ?</h2>
+					  <h2>Why migration to Drupal 8 ?</h2>
 					  <ul>
-					    <li class="fragment">Drupal6 is reaching EOL</li>
+					    <li class="fragment">Drupal 6 is reaching EOL</li>
 					    <li class="fragment">No more support for D6</li>
 					    <li class="fragment">Why not upgrade to D7</li>
 					  </ul>
@@ -116,32 +116,79 @@
 				<section>
 				  <h2>Update, Upgrade vs Migration</h2>
 				  <ul>
-				    <li class="fragment">Update</li>
-				    <li class="fragment">Upgrade</li>
-				    <li class="fragment">Migrate</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
+				    <li class="fragment">Update: Minor Version Changes</li>
+				    <li class="fragment">Upgrade: Major version Changes (7 -> 8 or 6 -> 8)</li>
+				    <li class="fragment">Upgrade: Inplace code upgrade</li>
+				    <li class="fragment">Migrate: Content and Configuration imports</li>
+				    <li class="fragment">Drupal 8: Only supported method is migration</li>
 				  </ul>
 				</section>
+				<section>
+				  <section>
+				    <h2>Migration Support</h2>
+				    <ul>
+				      <li class="fragment">D6 to D8: Core, CCK, Link, Email, Phone and ImageCache</li>
+				      <li class="fragment">D7 to D8: Content, users, taxonomy, blocks, menus and filter formats</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Migrations not Supported, yet</h2>
+				    <ul>
+				      <li class="fragment">Views</li>
+				      <li class="fragment">Multilingual Content</li>
+				      <li class="fragment">Entity References</li>
+				    </ul>
+				  </section>
+
+				</section>
+
+
 				<section>
 				  <h2>Core Migration Modules</h2>
 				  <ul>
 				    <li class="fragment">Migrate</li>
-				    <li class="fragment">Migrate Drupal to Drupal</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
+				    <li class="fragment">Provides API to migrate content and configuration to a drupal 8 site.</li>
+				    <li class="fragment">Migrate Drupal</li>
+				    <li class="fragment">Provides classes to migrate Content and Configuration from D6, D7 to D8</li>
 				  </ul>
 				</section>
 				<section>
-				  <h2>Contributed Modules</h2>
-				  <ul>
-				    <li class="fragment">Migration Tools</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				  </ul>
+				  <section>
+				    <h2>Contributed Modules</h2>
+				  </section>
+				  <section>
+				    <h2>Drupal Upgrade</h2>
+				    <ul>
+				      <li class="fragment">Provides necessary tools for core upgrade</li>
+				      <li class="fragment">User Interface @ '/upgrade'</li>
+				      <li class="fragment">Drush command 'migrate-upgrade'</li>
+				      <li class="fragment">Migrate Tools</li>
+				      <li class="fragment">Provides optional drush & UI tools for managing migrations</li>
+				      <li class="fragment">Drush Commands : status, import, rollback, stop, reset-status, messages, field-source</li>
+				      <li class="fragment">Migrate Plus</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Migrate Tools</h2>
+				    <ul>
+				      <li class="fragment">Provides optional drush & UI tools for managing migrations</li>
+				      <li class="fragment">Drush Commands : status, import, rollback, stop, reset-status, messages, field-source</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Migrate Plus</h2>
+				    <ul>
+				      <li class="fragment">Provides API for grouping migrations</li>
+				      <li class="fragment">Facility to manipulate incoming source data</li>
+				      <li class="fragment">Code Examples to build cusotm migrations</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Migrate Manifest</h2>
+				    <ul>
+				      <li class="fragment">Provides drush command for template based sql migration from a manifest file</li>
+				    </ul>
+				  </section>
 				</section>
 				<section>
 				  <h2>Migration API</h2>
@@ -156,11 +203,13 @@
 				<section>
 				  <h2>Planning for Migration</h2>
 				  <ul>
-				    <li class="fragment">Backup</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
+				    <li class="fragment">Take a Backup</li>
+				    <li class="fragment">Ensure consistent database state at source</li>
+				    <li class="fragment">A fresh drupal 8 installation</li>
+				    <li class="fragment">Access to source db from the new site</li>
+				    <li class="fragment">Access to source site files</li>
+				    <li class="fragment">Public files are accessed through sites address</li>
+				    <li class="fragment">Private files directory should be directly accessible to new D8 site</li>
 				  </ul>
 				</section>
 				<section>
@@ -235,9 +284,10 @@
 		</div>
     <footer class="azri-logo logo">
       <a href="http://www.arisolutions.com/"><img src="assets/azri-logo-white.png" alt="azri logo" /></a>
+      <a href="https://events.drupal.org/asia2016/" target="_new" class="event-logo"><img class="logo" src="assets/dcd_logo.png" alt="dcd logo" /></a>
     </footer>
     <footer class="dcd-logo logo">
-      <a href="http://2015.drupalcampdelhi.com/"><img src="assets/dcd_logo.png" alt="dcd logo" /></a>
+      <a href="https://events.drupal.org/asia2016/" target="_new"><img src="assets/dcd_logo.png" alt="dcd logo" /></a>
     </footer>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
