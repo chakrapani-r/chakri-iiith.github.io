@@ -201,16 +201,30 @@
 				  </ul>
 				</section>
 				<section>
-				  <h2>Planning for Migration</h2>
-				  <ul>
-				    <li class="fragment">Take a Backup</li>
-				    <li class="fragment">Ensure consistent database state at source</li>
-				    <li class="fragment">A fresh drupal 8 installation</li>
-				    <li class="fragment">Access to source db from the new site</li>
-				    <li class="fragment">Access to source site files</li>
-				    <li class="fragment">Public files are accessed through sites address</li>
-				    <li class="fragment">Private files directory should be directly accessible to new D8 site</li>
-				  </ul>
+				  <section>
+				    <h2>Planning for Migration</h2>
+				    <ul>
+				      <li class="fragment">Take a Backup</li>
+				      <li class="fragment">Ensure consistent database state at source</li>
+				      <li class="fragment">A fresh drupal 8 installation</li>
+				      <li class="fragment">Access to source db from the new site</li>
+				      <li class="fragment">Access to source site files</li>
+				      <li class="fragment">Public files are accessed through sites address</li>
+				      <li class="fragment">Private files directory should be directly accessible to new D8 site</li>
+				      <li class="fragment">Install migrate_upgrade module</li>
+				      <li class="fragment">If Drush, install Drush 8</li>
+				      <li class="fragment">If migrating D7 private files, configure D8 file_private_path in settings.php</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Enable required modules</h2>
+				    <ul>
+				      <li class="fragment">Migrate wont install any new modules in D8</li>
+				      <li class="fragment">Install all modules on D8 for which Content and Configurations has to be migrated</li>
+				      <li class="fragment">Migrations relevant for modules on both source and destination sites are run</li>
+				      <li class="fragment">Note: Modules may not map one to one</li>
+				    </ul>
+				  </section>
 				</section>
 				<section>
 				  <h2>Executing migration with UI</h2>
