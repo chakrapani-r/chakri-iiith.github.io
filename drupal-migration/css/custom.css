@@ -5,6 +5,9 @@ footer.azri-logo {
   left: 3em;
   width: 100%;
 }
+footer .org-logo{
+  width: 50%;
+}
 footer.azri-logo img {
   width: 100px;
 }
@@ -19,4 +22,16 @@ footer.dcd-logo img {
 }
 .reveal .controls {
   display:none;
+}
+footer .event-logo {
+    bottom: 0;
+    display: block;
+    height: 60px;
+    position: absolute;
+    right: 4em;
+    z-index: 100;
+}
+footer .event-logo img {
+    height: 60px;
+    width: auto;
 }
