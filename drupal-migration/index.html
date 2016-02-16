@@ -225,26 +225,74 @@
 				      <li class="fragment">Note: Modules may not map one to one</li>
 				    </ul>
 				  </section>
+				  <section>
+				    <h2>Do not configure Drupal 8 Site</h2>
+				    <ul>
+				      <li class="fragment">Migrate process will override configuration</li>
+				      <li class="fragment">Do not have to create content types and fields manually</li>
+				    </ul>
+				  </section>
 				</section>
 				<section>
-				  <h2>Executing migration with UI</h2>
+				  <h2>Available options (2)</h2>
 				  <ul>
-				    <li class="fragment">/migrate</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
+				    <li>Migrate upgrade interface - UI, easier & less control</li>
+				    <li>Drush - Robust, faster & allows selective migration</li>
+				    <li>Drush - requires additional modules</li>
+				    <li>Drush - runs from command line</li>
 				  </ul>
 				</section>
 				<section>
-				  <h2>Executing migration with Drush</h2>
-				  <ul>
-				    <li class="fragment">Simple method</li>
-				    <li class="fragment">Complex method</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				  </ul>
+				  <section>
+				    <h2>Executing an upgrade with UI</h2>
+				    <ul>
+				      <li class="fragment">Migrate upgrade modues</li>
+				      <li class="fragment">/upgrade</li>
+				      <li class="fragment">Provide credentials of source db & files</li>
+				      <li class="fragment">Summary of missing upgrade paths</li>
+				      <li class="fragment">If a module is not installed on destination, it reports the upgrade path missing</li>
+				      <li class="fragment">Summary of available upgrade paths</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>An image comes here!!</h2>
+				  </section>
+				</section>
+				<section>
+				  <section>
+				    <h2>Executing migration with Drush</h2>
+				    <ul>
+				      <li class="fragment">Drush 8 (composer)</li>
+				      <li class="fragment">Migrate Upgrade</li>
+				      <li class="fragment">Migrate Tools (if more than one time upgrade)</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Simple Method</h2>
+				    <ul>
+				      <li class="fragment">migrate_upgrade</li>
+				      <li class="fragment">Generate migrations based on migrate drupal templates & configured source site</li>
+				      <li class="fragment">Exeutes every create migration in dependency order</li>
+				      <li class="fragment">'--configure-only' - creating migrations only</li>
+				      <li class="fragment">Code:: drush migrate-upgrade --legacy-db=user:pass@local/dbname --legacy-root=d6.com --configure-only</li>
+				      <li class="fragment">drush migrate-status - see list of possible migrations, review and run migrations selectively</li>
+				      <li class="fragment">druhs migrate-import {migration_name}</li>
+				      <li class="fragment">druhs migrate-import --all</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Complex Method</h2>
+				    <ul>
+				      <li>migrate-manifest (Migrate Manifest module)</li>
+				      <li>Manifest file</li>
+				      <li>Set of migrations</li>
+				      <li>Run groups of migrations in a reproducible manner</li>
+				      <li>'drush configure-list | grep migrate' - gives the complete list of available migrations</li>
+				      <li>Creating a manifest yaml file</li>
+				      <li>List only the ones you need and their dependencies</li>
+				      <li>Migrations can be listed in any order, migrate will sort based on dependencies</li>
+				    </ul>
+				  </section>
 				</section>
 				<section>
 				  <h2>Creating custom migration plugins</h2>
