@@ -307,8 +307,30 @@
 				      <li>Creating a manifest yaml file</li>
 				      <li>List only the ones you need and their dependencies</li>
 				      <li>Migrations can be listed in any order, migrate will sort based on dependencies</li>
+				      <li>d6 modules for listed migrations are must. Otherwise migrations wont run properly</li>
+				      <li>Drush won't skip the missing migrations and tries to run everything</li>
+				      <li>drush migrate-manifest --legacy-db-url=user:pass@local/db manifest.yml</li>
 				    </ul>
 				  </section>
+				</section>
+				<section>
+				  <h2>Drush Migration Commands</h2>
+				  <ul>
+				    <li>migrate_upgrade
+				      <ul>
+					<li>Provided by drupal upgrade module</li>
+					<li>upgrade from d6/d7 to d8</li>
+					<li>Generates migrate configuration from source sites content & config</li>
+					<li>then runs migration in proper order (dependencies)</li>
+				      </ul>
+				    </li>
+				    <li>Options
+				      <ul>
+					<li>      </li>
+				      </ul>
+				    </li>
+				    
+				  </ul>
 				</section>
 				<section>
 				  <h2>Creating custom migration plugins</h2>
