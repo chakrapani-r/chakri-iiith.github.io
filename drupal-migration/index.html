@@ -314,6 +314,7 @@
 				  </section>
 				</section>
 				<section>
+				  <section>
 				  <h2>Drush Migration Commands</h2>
 				  <ul>
 				    <li>migrate_upgrade
@@ -326,11 +327,89 @@
 				    </li>
 				    <li>Options
 				      <ul>
-					<li>      </li>
+					<li>legacy-db-url</li>
+					<li>legacy-db-prefix</li>
+					<li>legacy-db-legacy-root</li>
+					<li>configure-only</li>					
+				      </ul>
+				    </li>				    
+				  </ul>
+				  </section>
+				  <section>
+				  <h2>Migration Commands ...</h2>
+				  <ul>
+				    <li>migrate_status (ms)</li>
+				    <li>migrate_import (mi)
+				      <ul>
+					<li>to process one or more migration process</li>
+					<li>normally used for custom migrations (non-drupal)</li>
+					<li>can be used to run the created migration configurations</li>
+					<li>eg: drush migrate-import migration_id1, id2</li>
 				      </ul>
 				    </li>
-				    
 				  </ul>
+				  </section>
+				  <section>
+				    <ul>
+				      <li>Import Options
+					<ul>
+					  <li>all</li>
+					  <li>group</li>
+					  <li>limit</li>
+					  <li>feddback</li>
+					  <li>idlist</li>
+					  <li>update</li>
+					  <li>force</li>
+					</ul>
+				      </li>
+				  </section>
+				  <section>
+				    <h2>More Commands ...</h2>
+				    <ul>
+				      <li>migrate_rollback (mr)</li>
+				      <li>migrate_stop (ms)</li>
+				      <li>migrate_reset_status (mrs)</li>
+				      <li>migrate_manifest</li>
+				      <li>migrate-messages (mmsg)</li>
+				      <li>migrate-field-source (mfs)</li>
+				  </section>
+				</section>
+				<section>
+				<section>
+				  <h2>Known Issues (6 to 8)</h2>
+				  <ul>
+				    <li>Story to Story</li>
+				    <li>Page to Basic page</li>
+				    <li>Fields missing in the edit form</li>
+				    <li>D6: Image nodes and files fields do not get migrated</li>
+				    <li>URL Aliases : if a language is not enabled in new d8 site, all aliases wont work</li>
+				    <li>Menu UI: menu_primary_links_source & menu_secondary_links_source are not migrated</li>
+				    <li>Profiles categories (d6) are not grouped in d8</li>
+				    <li>Profile field allowed values = allowed values + current selected values in d6</li>
+				    <li>Date formats : default, short, medium and long</li>
+				  </ul>
+				</section>
+				<section>
+				  <h2>Known issues ...(6 to 8)</h2>
+				  <u2>
+				    <li>Text/Input formats</li>
+				    <li>Timezones : daylight saving time</li>
+				    <li>Views</li>
+				    <li>Home page loads and theme looks broken</li>
+				  </u2>
+				</section>
+				<section>
+				  <h2>Known issues ...(7 to 8)</h2>
+				  <u2>
+				    <li>Blocked IPs - iid column is not migrated</li>
+				    <li>Menu UI variables</li>
+				    <li>Views</li>
+				    <li>Filters</li>
+				  </u2>
+				</section>
+				</section>
+				<section>
+				  <h2>After migration : Cleanup, rollback or rerun</h2>
 				</section>
 				<section>
 				  <h2>Creating custom migration plugins</h2>
