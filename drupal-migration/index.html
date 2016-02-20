@@ -59,6 +59,9 @@
 					</p>
 				</section>
 				<section>
+					<h2>Who We Are!</h2>
+				</section>				
+				<section>
 					<h2>Mohammad Asif(asifnoor)</h2>
 					<ul>
 						<li>From Hyderabad, India</li>
@@ -109,11 +112,8 @@
 				    <li class="fragment">Module developer</li>
 				    <li class="fragment">Worked with migrations in d7</li>
 				    <li class="fragment">Already familiar with D8</li>
-				    <li class="fragment">Worked with migrations in d8</li>
 				  </ul>
 				</section>
-
-
 				
 				<section>
 				  <h2>Why migration to Drupal 8 ?</h2>
@@ -130,7 +130,8 @@
 				  <ul>
 				    <li class="fragment">d7 Support is avaialble till 2019</li>
 				    <li class="fragment">d8 support is much longer</li>
-				    <li class="fragment">With little extra effort, you can ensure that your site is secured for next 8 - 10 years and can also use all the new features of d8</li>
+				    <li class="fragment">With little extra effort, you can ensure that your site is secured for next 8 - 10 years</li>
+				    <li class="fragment">New features of d8</li>
 				  </ul>
 				</section>
 				<section>
@@ -147,8 +148,8 @@
 				  <section>
 				    <h2>Migration Support</h2>
 				    <ul>
-				      <li class="fragment">D6 to D8: Core, CCK, Link, Email, Phone and ImageCache</li>
-				      <li class="fragment">D7 to D8: Content, users, taxonomy, blocks, menus and filter formats</li>
+				      <li class="fragment">d6 to d8: Core, CCK, Link, Email, Phone and ImageCache</li>
+				      <li class="fragment">d7 to d8: Content, users, taxonomy, blocks, menus and filter formats</li>
 				    </ul>
 				  </section>
 				  <section>
@@ -166,7 +167,7 @@
 				    <li class="fragment">Migrate</li>
 				    <li class="fragment">Provides API to migrate content and configuration to a drupal 8 site.</li>
 				    <li class="fragment">Migrate Drupal</li>
-				    <li class="fragment">Provides classes to migrate Content and Configuration from D6, D7 to D8</li>
+				    <li class="fragment">Provides support to migrate Content and Configuration from d6, d7 to d8</li>
 				  </ul>
 				</section>
 				<section>
@@ -204,7 +205,7 @@
 				    </ul>
 				  </section>
 				</section>
-				<section>
+				<!--<section>
 				  <h2>Migration API</h2>
 				  <ul>
 				    <li class="fragment">Migration API ?</li>
@@ -213,28 +214,28 @@
 				    <li class="fragment"></li>
 				    <li class="fragment"></li>
 				  </ul>
-				</section>
+				</section> -->
 				<section>
 				  <section>
 				    <h2>Planning for Migration</h2>
 				    <ul>
 				      <li class="fragment">Take a Backup</li>
 				      <li class="fragment">Ensure consistent database state at source</li>
-				      <li class="fragment">A fresh drupal 8 installation</li>
+				      <li class="fragment">A fresh Drupal 8 installation</li>
 				      <li class="fragment">Access to source db from the new site</li>
 				      <li class="fragment">Access to source site files</li>
 				      <li class="fragment">Public files are accessed through sites address</li>
-				      <li class="fragment">Private files directory should be directly accessible to new D8 site</li>
-				      <li class="fragment">Install migrate_upgrade module</li>
+				      <li class="fragment">Private files directory should be directly accessible to new d8 site</li>
+				      <li class="fragment">Install contrib migrate_upgrade module</li>
 				      <li class="fragment">If Drush, install Drush 8</li>
-				      <li class="fragment">If migrating D7 private files, configure D8 file_private_path in settings.php</li>
+				      <li class="fragment">If migrating d7 private files, configure D8 file_private_path in settings.php</li>
 				    </ul>
 				  </section>
 				  <section>
 				    <h2>Enable required modules</h2>
 				    <ul>
-				      <li class="fragment">Migrate wont install any new modules in D8</li>
-				      <li class="fragment">Install all modules on D8 for which Content and Configurations has to be migrated</li>
+				      <li class="fragment">Migrate wont install any new modules in d8</li>
+				      <li class="fragment">Install all modules on d8 for which Content and Configurations has to be migrated</li>
 				      <li class="fragment">Migrations relevant for modules on both source and destination sites are run</li>
 				      <li class="fragment">Note: Modules may not map one to one</li>
 				    </ul>
@@ -286,12 +287,12 @@
 				    <ul>
 				      <li class="fragment">migrate_upgrade</li>
 				      <li class="fragment">Generate migrations based on migrate drupal templates & configured source site</li>
-				      <li class="fragment">Exeutes every create migration in dependency order</li>
+				      <li class="fragment">Executes all created migration in dependency order</li>
 				      <li class="fragment">'--configure-only' - creating migrations only</li>
 				      <li class="fragment">Code:: drush migrate-upgrade --legacy-db=user:pass@local/dbname --legacy-root=d6.com --configure-only</li>
 				      <li class="fragment">drush migrate-status - see list of possible migrations, review and run migrations selectively</li>
-				      <li class="fragment">druhs migrate-import {migration_name}</li>
-				      <li class="fragment">druhs migrate-import --all</li>
+				      <li class="fragment">drush migrate-import {migration_name}</li>
+				      <li class="fragment">drush migrate-import --all</li>
 				    </ul>
 				  </section>
 				  <section>
@@ -302,14 +303,20 @@
 				      <li>Set of migrations</li>
 				      <li>Run groups of migrations in a reproducible manner</li>
 				      <li>'drush configure-list | grep migrate' - gives the complete list of available migrations</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h2>Complex Method ...</h2>
+				    <ul>
 				      <li>Creating a manifest yaml file</li>
 				      <li>List only the ones you need and their dependencies</li>
 				      <li>Migrations can be listed in any order, migrate will sort based on dependencies</li>
-				      <li>d6 modules for listed migrations are must. Otherwise migrations wont run properly</li>
+				      <li>d6 modules for listed migrations are must. Otherwise migrations won't run properly</li>
 				      <li>Drush won't skip the missing migrations and tries to run everything</li>
 				      <li>drush migrate-manifest --legacy-db-url=user:pass@local/db manifest.yml</li>
 				    </ul>
 				  </section>
+
 				</section>
 				<section>
 				  <section>
@@ -343,23 +350,10 @@
 					<li>normally used for custom migrations (non-drupal)</li>
 					<li>can be used to run the created migration configurations</li>
 					<li>eg: drush migrate-import migration_id1, id2</li>
+					<li>Import Options: all, group, limit, feedback, idlist, update, force, etc</li>
 				      </ul>
 				    </li>
 				  </ul>
-				  </section>
-				  <section>
-				    <ul>
-				      <li>Import Options
-					<ul>
-					  <li>all</li>
-					  <li>group</li>
-					  <li>limit</li>
-					  <li>feddback</li>
-					  <li>idlist</li>
-					  <li>update</li>
-					  <li>force</li>
-					</ul>
-				      </li>
 				  </section>
 				  <section>
 				    <h2>More Commands ...</h2>
@@ -380,36 +374,46 @@
 				    <li>Page to Basic page</li>
 				    <li>Fields missing in the edit form</li>
 				    <li>D6: Image nodes and files fields do not get migrated</li>
-				    <li>URL Aliases : if a language is not enabled in new d8 site, all aliases wont work</li>
-				    <li>Menu UI: menu_primary_links_source & menu_secondary_links_source are not migrated</li>
-				    <li>Profiles categories (d6) are not grouped in d8</li>
-				    <li>Profile field allowed values = allowed values + current selected values in d6</li>
-				    <li>Date formats : default, short, medium and long</li>
+				    <li>URL Aliases : if a language is not enabled in new d8 site, all aliases wont work</li>				
 				  </ul>
 				</section>
 				<section>
 				  <h2>Known issues ...(6 to 8)</h2>
-				  <u2>
+				  <ul>
+    				<li>Menu UI: menu_primary_links_source & menu_secondary_links_source are not migrated</li>
+				    <li>Profiles categories (d6) are not grouped in d8</li>
+				    <li>Profile field allowed values = allowed values + current selected values in d6</li>
+				    <li>Date formats : default, short, medium and long</li>
 				    <li>Text/Input formats</li>
+				  </ul>
+				</section>				
+				<section>
+				  <h2>Known issues ...(6 to 8)</h2>
+				  <ul>
 				    <li>Timezones : daylight saving time</li>
 				    <li>Views</li>
 				    <li>Home page loads and theme looks broken</li>
-				  </u2>
+				  </ul>
 				</section>
 				<section>
 				  <h2>Known issues ...(7 to 8)</h2>
-				  <u2>
+				  <ul>
 				    <li>Blocked IPs - iid column is not migrated</li>
 				    <li>Menu UI variables</li>
 				    <li>Views</li>
 				    <li>Filters</li>
-				  </u2>
+				  </ul>
 				</section>
 				</section>
 				<section>
-				  <h2>After migration : Cleanup, rollback or rerun</h2>
+				  <h2>After migration</h2>
+				  <ul>
+				    <li>Cleanup</li>
+				    <li>Rollback</li>
+				    <li>Rerun</li>
+				  </ul>
 				</section>
-				<section>
+				<!--<section>
 				  <h2>Creating custom migration plugins</h2>
 				  <ul>
 				    <li class="fragment">D8 plugins</li>
@@ -418,35 +422,20 @@
 				    <li class="fragment"></li>
 				    <li class="fragment"></li>
 				  </ul>
-				</section>
-				<section>
-				  <h2>Known Issues</h2>
-				  <ul>
-				    <li class="fragment">Views</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				  </ul>
-				</section>
+				</section>-->
 				<section>
 				  <h2>Testing your Migration</h2>
 				  <ul>
-				    <li class="fragment">Automated tests ?</li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
-				    <li class="fragment"></li>
+				    <li>Automated tests</li>
+				    <li>Random test of content and users with your new site</li>
+				    <li>Testing the configurations such as field settings, filter formats, blocks visibility, Entity references, etc</li>
 				  </ul>
 				</section>
-
-
-
-
 				<section>
 					<h2>References</h2>
 					<ul>
 					  <li>Slides: <a href="http://bit.ly/d8-migration">http://bit.ly/d8-migration</a></li>
+					  <li><a href="https://www.drupal.org/node/2167633">https://www.drupal.org/node/2167633</a></li>
 					</ul>
 				</section>
 
