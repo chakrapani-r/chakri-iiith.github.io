@@ -67,7 +67,8 @@
 						<li>From Hyderabad, India</li>
 						<li>Scrum Master/Technical Architect at Azri Solutions</li>
 						<li>Associated with Drupal since Drupal 4.x</li>
-						<li>Active member of Drupal Hyderabad group</li>						
+						<li>Active member of Drupal Hyderabad group</li>
+						<li>Maintainer of Contributed modules</li>
 					</ul>
 					<aside class="notes">
 						 speaker notes window (hit 's' on your keyboard).
@@ -79,7 +80,7 @@
 						<li>From Bangalore, India</li>
 						<li>Drupal architect at Azri Solutions</li>
 						<li>Drupal since 2009</li>
-						<li>Proud Contributor</li>
+						<li>Proud Contributor to Drupal</li>
 						<li>Lead Organizer of Drupal Bangalore</li>
 						<li>Track chair for Contributions track</li>
 						<li>Tinkering with Golang & Elixir</li>
@@ -92,11 +93,10 @@
 				<section>
 					<h2>Overview</h2>
 					<ul>
-					  <li class="fragment">Why Migration to Drupal 8</li>
+					  <li class="fragment">Why Migrate to Drupal 8</li>
 					  <li class="fragment">Update, Upgrade vs Migration</li>
 					  <li class="fragment">Core Migration modules</li>
 					  <li class="fragment">Contributed Modules</li>
-					  <!--<li class="fragment">Migration API ?</li>-->
 					  <li class="fragment">Planning for Migration</li>
 					  <li class="fragment">Executing migration with UI</li>
 					  <li class="fragment">Executing migration with Drush</li>
@@ -110,11 +110,11 @@
 				    <li class="fragment">Site Builder</li>
 				    <li class="fragment">Module developer</li>
 				    <li class="fragment">Worked with migrations in d7</li>
-				    <li class="fragment">Already familiar with D8</li>
+				    <li class="fragment">Already familiar with d8</li>
 				  </ul>
 				</section>				
 				<section>
-				  <h2>Why migration to Drupal 8 ?</h2>
+				  <h2>Why migrate to Drupal 8 ?</h2>
 				  <ul>
 				    <li class="fragment">Drupal 6 is reaching EOL</li>
 				    <li class="fragment">No security updates from community</li>
@@ -143,7 +143,7 @@
 				</section>
 				<section>
 				  <section>
-				    <h2>Migration Support</h2>
+				    <h2>Core Migration Support</h2>
 				    <ul>
 				      <li class="fragment">d6 to d8: Core, CCK, Link, Email, Phone and ImageCache</li>
 				      <li class="fragment">d7 to d8: Content, users, taxonomy, blocks, menus and filter formats</li>
@@ -173,6 +173,7 @@
 				  </section>
 				  <section>
 				    <h2>Drupal Upgrade</h2>
+				    <p>(migrate_upgrade)</p>
 				    <ul>
 				      <li class="fragment">Provides necessary tools for core upgrade</li>
 				      <li class="fragment">User Interface @ '/upgrade'</li>
@@ -214,6 +215,7 @@
 				</section> -->
 				<section>
 				  <section>
+				    <h3>Migration Workflow</h3>
 				  	<img src="assets/workflow.png" />
 				  </section>	
 				  <section>
@@ -228,7 +230,7 @@
 				      <li class="fragment">Private files directory should be directly accessible to new d8 site</li>
 				      <li class="fragment">Install contrib migrate_upgrade module</li>
 				      <li class="fragment">If Drush, install Drush 8</li>
-				      <li class="fragment">If migrating d7 private files, configure D8 file_private_path in settings.php</li>
+				      <!--<li class="fragment">If migrating d7 private files, configure D8 file_private_path in settings.php</li>-->
 				    </ul>
 				  </section>
 				  <section>
@@ -289,7 +291,8 @@
 				      <li class="fragment">Generate migrations based on migrate drupal templates & configured source site</li>
 				      <li class="fragment">Executes all created migration in dependency order</li>
 				      <li class="fragment">'--configure-only' - creating migrations only</li>
-				      <li class="fragment">Code:: drush migrate-upgrade --legacy-db=user:pass@local/dbname --legacy-root=d6.com --configure-only</li>
+				      <!--<li class="fragment">Code:: drush migrate-upgrade --legacy-db=user:pass@local/dbname --legacy-root=d6.com --configure-only</li>-->
+				      <code class="fragment"><br/>drush migrate-upgrade --legacy-db=user:pass@local/dbname --legacy-root=d6.com --configure-only<br/></code>
 				      <li class="fragment">drush migrate-status - see list of possible migrations, review and run migrations selectively</li>
 				      <li class="fragment">drush migrate-import {migration_name}</li>
 				      <li class="fragment">drush migrate-import --all</li>
@@ -299,8 +302,7 @@
 				    <h2>Complex Method</h2>
 				    <ul>
 				      <li>migrate-manifest (Migrate Manifest module)</li>
-				      <li>Manifest file</li>
-				      <li>Set of migrations</li>
+				      <li>Manifest file to setup specific set of migrations</li>
 				      <li>Run groups of migrations in a reproducible manner</li>
 				      <li>'drush configure-list | grep migrate' - gives the complete list of available migrations</li>
 				    </ul>
@@ -316,7 +318,7 @@
 				      <li>Migrations can be listed in any order, migrate will sort based on dependencies</li>
 				      <li>d6 modules for listed migrations are must. Otherwise migrations won't run properly</li>
 				      <li>Drush won't skip the missing migrations and tries to run everything</li>
-				      <li>drush migrate-manifest --legacy-db-url=user:pass@local/db manifest.yml</li>
+				      <code><br/>drush migrate-manifest --legacy-db-url=user:pass@local/db manifest.yml</code>
 				    </ul>
 				  </section>
 				</section>
@@ -324,7 +326,7 @@
 				  <section>
 				  <h2>Drush Migration Commands</h2>
 				  <ul>
-				    <li>migrate_upgrade
+				    <li>migrate-upgrade
 				      <ul>
 					<li>Provided by drupal upgrade module</li>
 					<li>upgrade from d6/d7 to d8</li>
@@ -336,7 +338,7 @@
 				      <ul>
 					<li>legacy-db-url</li>
 					<li>legacy-db-prefix</li>
-					<li>legacy-db-legacy-root</li>
+					<li>legacy-root</li>
 					<li>configure-only</li>					
 				      </ul>
 				    </li>				    
@@ -363,9 +365,7 @@
 				      <li>migrate-rollback (mr)</li>
 				      <li>migrate-stop (ms)</li>
 				      <li>migrate-reset-status (mrs)</li>
-				      <li>migrate-manifest</li>
 				      <li>migrate-messages (mmsg)</li>
-				      <li>migrate-field-source (mfs)</li>
 				  </section>
 				</section>
 				<section>
@@ -400,7 +400,7 @@
 				<section>
 				  <h2>Known issues ...(7 to 8)</h2>
 				  <ul>
-				    <li>Blocked IPs - iid column is not migrated</li>
+				    <li>Blocked IPs are not migrated</li>
 				    <li>Menu UI variables</li>
 				    <li>Views</li>
 				    <li>Filters</li>
@@ -410,7 +410,7 @@
 				<section>
 				  <h2>After migration</h2>
 				  <ul>
-				    <li>Cleanup</li>
+				    <li>Uninstall migrate modules</li>
 				    <li>Rollback</li>
 				    <li>Rerun</li>
 				  </ul>
@@ -425,6 +425,7 @@
 				    <li class="fragment"></li>
 				  </ul>
 				</section>-->
+<!--
 				<section>
 				  <h2>Testing your Migration</h2>
 				  <ul>
@@ -433,6 +434,7 @@
 				    <li>Testing the configurations such as field settings, filter formats, blocks visibility, Entity references, etc</li>
 				  </ul>
 				</section>
+-->
 				<section>
 					<h2>References</h2>
 					<ul>
@@ -444,8 +446,9 @@
 
 				<section>
 					<h1>Thank You!</h1>
-					<h3>Mohammad Asif / @asifnoor</h3>
-					<h3>Chakrapani R / @chakri_iiith</h3>
+					<medium>Mohammad Asif / @asifnoor</medium>
+					<br/><br/>
+					<medium>Chakrapani R / @chakri_iiith</medium>
 				</section>
 			</div>
 
